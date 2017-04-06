@@ -7,9 +7,33 @@
 **Packages**
 
 ```yml
+webtier_packages:
+  - binutils-doc
+  - build-essential
+  - gfortran
+  - g++
+  - python-lxml
+
+webtier_utilities_extras:
+  - gdal-bin
+  - memcached
+  - netcat-openbsd
 ```
 
 **Repositories**
 
 ```yml
+webtier_repositories:
+  - url: git@github.com:mongkok/defocus
+    dest: /opt/apps/defocus
+    version: release
+```
+
+**VPN Server**
+
+```yml
+webtier_vpn_config:
+  user: mongkok
+  psk: "{{vpn_psk}}"
+  password: "{{vpn_password}}"
 ```
