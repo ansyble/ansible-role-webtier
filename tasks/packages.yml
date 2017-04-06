@@ -1,0 +1,12 @@
+---
+- name: packages | install
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ webtier_packages }}"
+
+- name: packages | install utilities
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ webtier_utilities_extras }}"

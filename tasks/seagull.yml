@@ -1,0 +1,10 @@
+---
+- name: seagull | container
+  docker_container:
+    name: seagull
+    image: tobegit3hub/seagull
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports: "{{ webtier_seagull_ports }}"
+    restart: yes
+    restart_policy: always

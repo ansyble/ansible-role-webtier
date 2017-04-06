@@ -1,0 +1,17 @@
+---
+- name: repos | directories
+  file:
+    path: "{{ item.dest }}"
+    state: directory
+    owner: "{{ item.user|default(remote_user) }}"
+  with_items: "{{ repositories }}"
+
+- name: repos | clone ssh repositories
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    ssh_opts: "-o StrictHostKeyChecking=no"
+    update: no
+    version: "{{ item.version|default('HEAD') }}"
+  become_user: "{{ item.user|default(remote_user) }}"
+  with_items: "{{ webtier_repositories }}"

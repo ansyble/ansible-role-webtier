@@ -1,0 +1,36 @@
+---
+# --- packages
+webtier_packages:
+  - acl
+  - apticron
+  - autoconf
+  - automake
+  - binutils-doc
+  - build-essential
+  - gfortran
+  - g++
+  - liblapack-dev
+  - libmysqlclient-dev
+  - libopenblas-dev
+  - libssl-dev
+  - libtool
+  - libxml2-dev
+  - libxslt1-dev
+  - libyaml-dev
+  - python-imaging
+  - python-lxml
+  - ruby
+  - update-notifier-common
+
+webtier_utilities_extras:
+  - ccze
+  - gdal-bin
+  - memcached
+  - netcat-openbsd
+
+# --- repos
+webtier_repositories: []
+
+# --- seagull
+webtier_seagull_ports:
+  - 127.0.0.1:10086:10086

@@ -1,0 +1,16 @@
+---
+- name: vpn | container
+  docker_container:
+    name: ipsec-vpn-server
+    image: hwdsl2/ipsec-vpn-server
+    ports: "{{ webtier_vpn_config.ports|default([]) }}"
+    env:
+      VPN_USER: "{{ webtier_vpn_config.user }}"
+      VPN_IPSEC_PSK: "{{ webtier_vpn_config.psk }}"
+      VPN_PASSWORD: "{{ webtier_vpn_config.password }}"
+    restart: yes
+    restart_policy: always
+    volumes:
+      - /lib/modules:/lib/modules:ro
+    privileged: yes
+    network_mode: "{{ webtier_vpn_config.network_mode|default('host') }}"

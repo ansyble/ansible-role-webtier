@@ -1,0 +1,13 @@
+---
+- include: packages.yml
+  tags: [webtier, webtier-packages]
+
+- include: repos.yml
+  tags: [webtier, webtier-repos]
+
+- include: seagull.yml
+  tags: [webtier, webtier-seagull]
+
+- include: vpn.yml
+  when: vpn_config is defined
+  tags: [webtier, webtier-vpn]
