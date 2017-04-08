@@ -32,5 +32,7 @@ webtier_utilities_extras:
 webtier_repositories: []
 
 # --- seagull
+webtier_seagull_deploy: true
+
 webtier_seagull_ports:
   - 127.0.0.1:10086:10086
