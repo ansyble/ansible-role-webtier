@@ -1,4 +1,6 @@
 ---
+remote_user: root
+
 webtier_packages:
   - g++
 
