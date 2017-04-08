@@ -33,8 +33,8 @@ webtier_utilities_extras:
 
 ```yml
 webtier_repositories:
-  - url: git@github.com:mongkok/defocus
-    dest: /opt/apps/defocus
+  - url: git@github.com:me/repo
+    dest: /path/to/repo
     version: release
 ```
 
@@ -42,7 +42,7 @@ webtier_repositories:
 
 ```yml
 webtier_vpn_config:
-  user: mongkok
+  user: me
   psk: "{{vpn_psk}}"
   password: "{{vpn_password}}"
 ```
