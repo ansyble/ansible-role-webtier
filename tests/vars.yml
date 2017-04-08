@@ -5,7 +5,6 @@ webtier_packages:
 webtier_utilities_extras:
   - netcat
 
-
 webtier_repositories:
   - url: https://github.com/ansyble/role-webtier
     dest: /tmp/webtier

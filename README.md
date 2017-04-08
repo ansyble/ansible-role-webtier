@@ -34,6 +34,7 @@ webtier_utilities_extras:
 ```yml
 webtier_repositories:
   - url: git@github.com:me/repo
+    user: me
     dest: /path/to/repo
     version: release
 ```
