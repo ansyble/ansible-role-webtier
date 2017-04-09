@@ -50,6 +50,6 @@ webtier_repositories:
 ```yml
 webtier_vpn_config:
   user: me
-  psk: "{{vpn_psk}}"
-  password: "{{vpn_password}}"
+  psk: "{{ vpn_psk }}"
+  password: "{{ vpn_password }}"
 ```
