@@ -1,4 +1,8 @@
 ---
+- include: hostname.yml
+  when: webtier_hostname is defined
+  tags: [webtier, webtier-hostname]
+
 - include: packages.yml
   tags: [webtier, webtier-packages]
 
@@ -10,5 +14,5 @@
   tags: [webtier, webtier-seagull]
 
 - include: vpn.yml
-  when: vpn_config is defined
+  when: webtier_vpn_config is defined
   tags: [webtier, webtier-vpn]

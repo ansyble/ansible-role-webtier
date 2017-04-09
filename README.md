@@ -13,6 +13,12 @@ ansible-galaxy install ansyble.webtier
 
 ### Usage
 
+**Hostname**
+
+```yml
+webtier_hostname: my-host
+```
+
 **Packages**
 
 ```yml

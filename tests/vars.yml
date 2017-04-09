@@ -1,6 +1,8 @@
 ---
 remote_user: root
 
+webtier_hostname: test
+
 webtier_packages:
   - g++
 
