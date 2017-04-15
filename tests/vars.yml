@@ -13,5 +13,3 @@ webtier_repositories:
   - url: https://github.com/ansyble/role-webtier
     dest: /tmp/webtier
     version: master
-
-webtier_seagull_deploy: false

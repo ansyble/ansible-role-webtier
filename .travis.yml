@@ -5,14 +5,22 @@ python: "2.7"
 services:
   - docker
 
+before_install:
+  - deactivate
+  - sudo apt-get update -qq
+  - sudo apt-get install -y docker-engine
+
 addons:
   apt:
     packages:
     - python-pip
 
 install:
+  # Install Python client for docker
+  - sudo pip install docker docker-compose
+
   # Install ansible
-  - pip install ansible
+  - sudo pip install ansible
 
   # Check ansible version
   - ansible --version
