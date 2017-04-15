@@ -10,7 +10,7 @@
   tags: [webtier, webtier-repos]
 
 - include: seagull.yml
-  when: webtier_seagull_deploy
+  when: not webtier_skip_seagull
   tags: [webtier, webtier-seagull]
 
 - include: vpn.yml
