@@ -1,18 +1,18 @@
 ---
-- include: hostname.yml
+- import_tasks: hostname.yml
   when: webtier_hostname is defined
   tags: [webtier, webtier-hostname]
 
-- include: packages.yml
+- import_tasks: packages.yml
   tags: [webtier, webtier-packages]
 
-- include: repos.yml
+- import_tasks: repos.yml
   tags: [webtier, webtier-repos]
 
-- include: seagull.yml
+- import_tasks: seagull.yml
   when: not webtier_skip_seagull
   tags: [webtier, webtier-seagull]
 
-- include: vpn.yml
+- import_tasks: vpn.yml
   when: webtier_vpn_config is defined
   tags: [webtier, webtier-vpn]
