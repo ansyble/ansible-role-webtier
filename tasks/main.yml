@@ -9,10 +9,6 @@
 - import_tasks: repos.yml
   tags: [webtier, webtier-repos]
 
-- import_tasks: seagull.yml
-  when: not webtier_skip_seagull
-  tags: [webtier, webtier-seagull]
-
 - import_tasks: vpn.yml
   when: webtier_vpn_config is defined
   tags: [webtier, webtier-vpn]
